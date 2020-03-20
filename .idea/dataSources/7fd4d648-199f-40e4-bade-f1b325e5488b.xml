@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Rails factor_auth: test">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.17">
+    <root id="1">
+      <ServerVersion>11.6</ServerVersion>
+      <StartupTime>1583426151</StartupTime>
+    </root>
+    <database id="2" parent="1" name="factor75_development">
+      <ObjectId>16384</ObjectId>
+      <Owner>chris</Owner>
+    </database>
+    <database id="3" parent="1" name="factor75_test">
+      <ObjectId>16385</ObjectId>
+      <Owner>chris</Owner>
+    </database>
+    <database id="4" parent="1" name="factor_auth_development">
+      <ObjectId>1293021</ObjectId>
+      <Owner>chris</Owner>
+    </database>
+    <database id="5" parent="1" name="factor_auth_test">
+      <ObjectId>1293022</ObjectId>
+      <Owner>chris</Owner>
+      <IntrospectionStateNumber>106028</IntrospectionStateNumber>
+      <Current>1</Current>
+    </database>
+    <database id="6" parent="1" name="postgres">
+      <ObjectId>13384</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>chris</Owner>
+    </database>
+    <database id="7" parent="1" name="rails_go">
+      <ObjectId>632751</ObjectId>
+      <Owner>chris</Owner>
+    </database>
+    <role id="8" parent="1" name="chris">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <BypassRls>1</BypassRls>
+    </role>
+    <role id="9" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+    </role>
+    <role id="10" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+    </role>
+    <role id="11" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+    </role>
+    <role id="12" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+    </role>
+    <role id="13" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+    </role>
+    <role id="14" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+    </role>
+    <role id="15" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+    </role>
+    <role id="16" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+    </role>
+  </database-model>
+</dataSource>
