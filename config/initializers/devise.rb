@@ -252,6 +252,7 @@ Devise.setup do |config|
   #
   # The "*/*" below is required to match Internet Explorer requests.
   # config.navigational_formats = ['*/*', :html]
+  config.navigational_formats = []
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
@@ -301,11 +302,15 @@ Devise.setup do |config|
     jwt.secret = "4308d01dbed9ba4ec5ac8e2b81b6cd374ac539c79df839f2b417a3ebba14fac959fc6d06be54e9561e8baafb759874e33221b0ad4be3d522a7268c9dfb7cd9c7"
 
     jwt.dispatch_requests = [
-        ['POST', %r{^/api/users/login$}]
+        ['POST', %r{^/api/users/signup$}], ['POST', %r{^/api/users/login}]
     ]
     jwt.revocation_requests = [
         ['DELETE', %r{^/api/users/logout$}]
     ]
+
+    jwt.request_formats = {
+        user: [:json],
+    }
 
     jwt.expiration_time = 5.minutes.to_i
   end
