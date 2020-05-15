@@ -1,5 +1,8 @@
 #### This is a basic implementation of a JWT server using Devise/Warden
 
+Some basic information about this
+https://medium.com/@lukerollans/implementing-jwt-authentication-as-a-custom-devise-strategy-54948bddb134
+
 ##### How to use
 Note: This is not production ready. Secret token isn't secure, etc. Plus payload is just user object, etc
 
