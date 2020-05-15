@@ -1,6 +1,8 @@
 #### This is a basic implementation of a JWT server using Devise/Warden
 
 ##### How to use
+Note: This is not production ready. Secret token isn't secure, etc
+
 * clone this repo
 * run `rails s`
 * go to postman or whatever REST client you like
