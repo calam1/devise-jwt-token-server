@@ -299,7 +299,7 @@ Devise.setup do |config|
   # config.sign_in_after_change_password = true
 
   config.jwt do |jwt|
-    jwt.secret = "4308d01dbed9ba4ec5ac8e2b81b6cd374ac539c79df839f2b417a3ebba14fac959fc6d06be54e9561e8baafb759874e33221b0ad4be3d522a7268c9dfb7cd9c7"
+    jwt.secret = ENV['JWT_SECRET']
 
     jwt.dispatch_requests = [
         ['POST', %r{^/api/users/signup$}], ['POST', %r{^/api/users/login}]
@@ -312,6 +312,6 @@ Devise.setup do |config|
         user: [:json],
     }
 
-    jwt.expiration_time = 5.minutes.to_i
+    jwt.expiration_time = Integer(ENV['JWT_EXPIRATION_MINUTES']).minutes.to_i || 120.minutes.to_i
   end
 end
