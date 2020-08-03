@@ -312,6 +312,10 @@ Devise.setup do |config|
         user: [:json],
     }
 
-    jwt.expiration_time = Integer(ENV['JWT_EXPIRATION_MINUTES']).minutes.to_i || 120.minutes.to_i
+    time_value = ENV['JWT_EXPIRATION_MINUTES']
+    time_value_int = Integer(time_value) if !time_value.nil?
+    time_value_final = time_value_int || 120
+    expiration = time_value_final
+    jwt.expiration_time = expiration.minutes.to_i
   end
 end
