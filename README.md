@@ -16,7 +16,7 @@ POST localhost:3000/api/users/login
 ```
 Request Body contains the following
 ```
-{"user":{"email":"jimmy@factor75.com", "password":"factor75"}}
+{"user":{"email":"fsdfdsfw@test.com", "password":"test123"}}
 ```
 
 The response header look something like this - just showing a few lines of the header.
